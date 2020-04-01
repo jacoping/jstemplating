@@ -6,6 +6,10 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"> </script>
     <script type="text/javascript" src="dati.js"> </script>
 
+      <style media="screen">
+        .pics-small {width: 100px}
+      </style>
+
   </head>
   <body>
 
@@ -18,11 +22,10 @@
       var header = "<img src='{{website.logo}}'> <h1>{{website.title}}</h1> <p>{{website.subtitle}}</p><hr>";
       document.querySelector("#container1").innerHTML = Mustache.render(header, dati);
 
-      var template2 = "{{#progetti}} <h3>{{title}}</h3> <p>{{description}}<br><br></p> {{/progetti}}";
+      var template2 = "{{#works}} <div class='work-wrapper'> <img src='{{cover}}'><h3>{{title}}</h3><p>{{&description}}  <br></p> {{#pics}}<img class='pics-small' src='{{#.}}{{.}}{{/.}}''/>{{/pics}} </div> {{/works}} ";
       document.querySelector("#container2").innerHTML = Mustache.render(template2, dati);
 
     </script>
-
 
 
   </body>
