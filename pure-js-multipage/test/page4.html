@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Pure JS Multipage</title>
+
+
+</head>
+
+<body>
+<div id="noscript"><h1>THIS WEBSITE DOES NOT WORK WITHOUT JAVASCRIPT</h1></div>
+
+<header id="the_header">
+</header>
+<nav id="the_menu">
+</nav>
+
+
+
+<section>
+<p>QUESTO È IL CONTENUTO DELLA PAGINA 4</p>
+</section>
+
+
+
+<footer id="the_footer">
+</footer>
+
+<!-- ATTENZIONE HO DOVUTO CAMBIARE IL PATH DI generate.js -->
+<script type="text/javascript" src="../generate.js"></script>
+<script type="text/javascript">
+let noscript = document.querySelector("#noscript");
+noscript.parentNode.removeChild(noscript);
+generate_header();
+generate_menu();
+generate_footer();
+</script>
+
+
+</body>
+</html>
